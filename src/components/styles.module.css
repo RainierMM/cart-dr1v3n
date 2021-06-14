@@ -1,0 +1,27 @@
+.card {
+  align-items: flex-start;
+  background: #5d5fef;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  height: 578px;
+  left: 520.5px;
+  padding: 20px;
+  position: absolute;
+  top: 223px;
+  width: 399px;
+}
+
+.buyCart {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  height: 28px;
+  left: 24px;
+  line-height: 28px;
+  position: static;
+  top: 24px;
+  width: 207px;
+}

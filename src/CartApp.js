@@ -1,9 +1,14 @@
 import React from "react";
+import { Card } from "./components/Card";
 
-export const CartApp = () => {
+import styles from "./index.module.css";
+
+const CartApp = () => {
   return (
-    <div>
-      <h1>CartApp</h1>
+    <div className={styles.mainContainer}>
+      <Card />
     </div>
   );
 };
+
+export default CartApp;
