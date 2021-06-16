@@ -5,23 +5,41 @@
   display: flex;
   flex-direction: column;
   height: 578px;
-  left: 520.5px;
-  padding: 20px;
+  left: 50%;
   position: absolute;
-  top: 223px;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 399px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(6, auto);
+  grid-gap: 0.5em;
+  margin: 1.5em;
+  height: 100%;
 }
 
 .buyCart {
   color: #ffffff;
   font-family: "Roboto", sans-serif;
-  font-size: 24px;
+  font-size: 1.5em;
   font-style: normal;
   font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 4;
   height: 28px;
-  left: 24px;
   line-height: 28px;
-  position: static;
-  top: 24px;
+  position: absolute;
   width: 207px;
+}
+
+.divider {
+  border-top: 0.5px solid #7879f1;
+  width: 22em;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
