@@ -4,21 +4,22 @@
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
-  height: 578px;
+  height: 36.125em;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 399px;
+  width: 24.938em;
 }
 
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(6, auto);
-  grid-gap: 0.5em;
+  grid-template-columns: 5em 5.5em 4.4em 4.938em;
+  grid-template-rows: 2em 0em 5em 0em 5em 0em 5em 0em 1.3em 1.3em 0em 2em 2.3em 0.87em;
+  grid-gap: 0.71em;
   margin: 1.5em;
-  height: 100%;
+  height: 33.125em;
+  width: 21.938em;
 }
 
 .buyCart {
@@ -27,19 +28,272 @@
   font-size: 1.5em;
   font-style: normal;
   font-weight: bold;
-  grid-row-start: 1;
   grid-column-start: 1;
   grid-column-end: 4;
-  height: 28px;
-  line-height: 28px;
-  position: absolute;
-  width: 207px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  height: 1.75em;
+  line-height: 1.75em;
+  position: relative;
+  width: 12.93em;
 }
 
 .divider {
-  border-top: 0.5px solid #7879f1;
-  width: 22em;
-  grid-row-start: 2;
+  border-top: 0.031em solid #7879f1;
   grid-column-start: 1;
   grid-column-end: 4;
+  width: 22em;
+}
+
+.image {
+  background-color: black;
+  border-radius: 0.5em;
+  grid-column-start: 1;
+  height: 5em 0;
+  width: 5em;
+}
+
+.description {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  margin: 0;
+}
+
+.productName {
+  margin: 0.5em 0;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125em;
+  height: 1.313em;
+  line-height: 1.313em;
+  width: 5.5em;
+}
+
+.productAmountBox {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.productAmount {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.75em;
+  height: 0.875em;
+  line-height: 0.875em;
+  width: 3.063em;
+}
+
+.radioButtonsArea {
+  background: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.productAmountButton {
+  align-items: center;
+  background: #ffffff;
+  border-radius: 1.125em;
+  display: flex;
+  flex-direction: column;
+  height: 1.125em;
+  justify-content: center;
+  margin: 0.25em 0em;
+  top: 0.094em;
+  width: 1.125em;
+}
+
+.productAmountNumber {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.125em;
+  height: 1.313em;
+  line-height: 1.313em;
+  margin: 0.1em 0.4em 0.4em 0.4em;
+  width: 0.688em;
+}
+
+.sustract {
+  color: #5d5fef;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.75em;
+  height: 0.875em;
+  line-height: 0.875em;
+  width: 0.3em;
+}
+
+.add {
+  color: #5d5fef;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.75em;
+  height: 0.875em;
+  line-height: 0.875em;
+  width: 0.438em;
+}
+
+.nullBox {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 3;
+  margin: 0;
+}
+.priceBox {
+  background: none;
+  display: flex !important;
+  flex-direction: column;
+  margin: 0;
+}
+
+.productPrice {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125em;
+  height: 1.313em;
+  line-height: 1.313em;
+  margin: 0.5em 0em 1.4em 0em;
+  text-align: -webkit-right;
+  width: 4.313em;
+}
+
+.deleteProduct {
+  align-items: center;
+  background: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.subtotalText {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125em;
+  grid-column-start: 1;
+  grid-row-start: 9;
+  height: 1.313em;
+  line-height: 1.313em;
+  width: 4.5em;
+}
+
+.subtotalNumber {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125em;
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 9;
+  height: 1.313em;
+  line-height: 1.313em;
+  margin-left: 0.25em;
+  text-align: -webkit-center;
+  width: 4.938em;
+}
+
+.shippingText {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125em;
+  grid-column-start: 1;
+  grid-row-start: 10;
+  height: 1.313em;
+  line-height: 1.313em;
+  width: 4.5em;
+}
+
+.shippingNumber {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125em;
+  grid-column-start: 4;
+  grid-row-start: 10;
+  height: 1.313em;
+  line-height: 1.313em;
+  margin-left: 0.5em;
+  text-align: -webkit-center;
+  width: 4.938em;
+}
+
+.totalPriceText {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125em;
+  grid-column-start: 1;
+  grid-row-start: 12;
+  height: 1.313em;
+  line-height: 1.313em;
+  width: 4.5em;
+}
+
+.totalPriceNumber {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125em;
+  grid-column-start: 4;
+  grid-row-start: 12;
+  height: 1.313em;
+  line-height: 1.313em;
+  margin-left: 0.25em;
+  text-align: -webkit-center;
+  width: 4.938em;
+}
+
+.payButton {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 0.5em;
+  border: none;
+  color: #5d5fef;
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125em;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 13;
+  justify-content: center;
+  line-height: 1.313em;
+  padding: 0.5em;
+}
+
+.clearCart {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.75em;
+  grid-row-start: 14;
+  grid-column-start: 4;
+  line-height: 0.875em;
+  text-align: right;
 }
