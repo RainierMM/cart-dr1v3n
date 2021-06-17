@@ -42,6 +42,15 @@
   border-top: 0.031em solid #7879f1;
   grid-column-start: 1;
   grid-column-end: 4;
+
+  width: 22em;
+}
+
+.dividerSpecial {
+  border-top: 0.031em solid #7879f1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 8;
   width: 22em;
 }
 
@@ -112,6 +121,10 @@
   width: 1.125em;
 }
 
+.productAmountButton:hover {
+  cursor: pointer;
+}
+
 .productAmountNumber {
   color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -179,6 +192,10 @@
   display: flex;
   flex-direction: row;
   margin: 0;
+}
+
+.deleteProduct:hover {
+  cursor: pointer;
 }
 
 .subtotalText {
@@ -286,6 +303,10 @@
   padding: 0.5em;
 }
 
+.payButton:hover {
+  cursor: pointer;
+}
+
 .clearCart {
   color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -296,4 +317,8 @@
   grid-column-start: 4;
   line-height: 0.875em;
   text-align: right;
+}
+
+.clearCart:hover {
+  cursor: pointer;
 }

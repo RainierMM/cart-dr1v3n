@@ -1,17 +1,48 @@
-import React, { useContext, Fragment, useState } from "react";
+import React, { useContext, Fragment, useEffect } from "react";
 import styles from "./styles.module.css";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { CartAppContext } from "../context";
 
 const Product = () => {
-  const { data } = useContext(CartAppContext);
+  const { data, cart, setCart } = useContext(CartAppContext);
 
-  console.log(data);
+  const addAmount = (itemId, newAmount) => {
+    const find = cart.findIndex(({ id }) => id === itemId);
+    const newCart = [...cart];
+
+    if (newCart[find].amount >= 0) newCart[find].amount = newAmount + 1;
+
+    setCart(newCart);
+  };
+
+  const sustractAmount = (itemId, newAmount) => {
+    const find = cart.findIndex(({ id }) => id === itemId);
+    const newCart = [...cart];
+
+    if (newCart[find].amount >= 1) {
+      newCart[find].amount = newAmount - 1;
+    } else {
+      newCart[find].amount = 0;
+    }
+
+    setCart(newCart);
+  };
+
+  const deleteProduct = (itemId) => {
+    const find = cart.findIndex(({ id }) => id === itemId);
+    const newCart = [...cart];
+
+    newCart.splice(newCart[find], 1);
+
+    setCart(newCart);
+  };
+
+  console.log(cart);
 
   return (
     <>
-      {data && data.length > 0
-        ? data.map(({ id, name, price, image, amount }) => (
+      {cart && cart.length > 0
+        ? cart.map(({ id, name, price, image, amount }) => (
             <Fragment key={id}>
               <div className={styles.divider}></div>
 
@@ -22,11 +53,17 @@ const Product = () => {
                 <div className={styles.productAmountBox}>
                   <p className={styles.productAmount}>Cantidad</p>
                   <div className={styles.radioButtonsArea}>
-                    <div className={styles.productAmountButton}>
+                    <div
+                      onClick={() => sustractAmount(id, amount)}
+                      className={styles.productAmountButton}
+                    >
                       <div className={styles.sustract}>-</div>
                     </div>
                     <span className={styles.productAmountNumber}>{amount}</span>
-                    <div className={styles.productAmountButton}>
+                    <div
+                      onClick={() => addAmount(id, amount)}
+                      className={styles.productAmountButton}
+                    >
                       <div className={styles.add}>+</div>
                     </div>
                   </div>
@@ -34,8 +71,13 @@ const Product = () => {
               </div>
               <div styles={styles.nullBox}></div>
               <div styles={styles.priceBox}>
-                <p className={styles.productPrice}>{`S/.${price}`}</p>
-                <div className={styles.deleteProduct}>
+                <p className={styles.productPrice}>{`S/.${price * amount}`}</p>
+                <div
+                  onClick={() => {
+                    deleteProduct(id);
+                  }}
+                  className={styles.deleteProduct}
+                >
                   <DeleteIcon style={{ color: "#FFFFFF", margin: "-5px" }} />
                   <span
                     style={{
