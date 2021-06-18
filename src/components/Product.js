@@ -37,8 +37,6 @@ const Product = () => {
     setCart(newCart);
   };
 
-  console.log(cart);
-
   return (
     <>
       {cart && cart.length > 0
